@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
 import './App.css';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="header">
-          <h1 className="header__title">Создание виртуальной машины</h1>
-        </header>
+        <Header />
         <div className="stepper">
         </div>
         <div className="filter"></div>
