@@ -1,0 +1,14 @@
+.light {
+  $green: #55bb73;
+  $green-light: #5bc47a;
+
+  .button {
+    background: $green;
+    transition: all .15s ease-in-out;
+  }
+
+  .button:hover {
+    background: $green-light;
+  }
+
+}
