@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import Stepper from './components/Stepper';
 import './App.css';
 
 class App extends Component {
@@ -7,8 +8,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <div className="stepper">
-        </div>
+        <Stepper />
         <div className="filter"></div>
         <div className="item-list"></div>
         <div className="form"></div>
