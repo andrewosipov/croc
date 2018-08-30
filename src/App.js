@@ -9,9 +9,12 @@ class App extends Component {
         <header className="header">
           <h1 className="header__title">Создание виртуальной машины</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <div className="stepper">
+        </div>
+        <div className="filter"></div>
+        <div className="item-list"></div>
+        <div className="form"></div>
+        <div className="buttons"></div>
       </div>
     );
   }
