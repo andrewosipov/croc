@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
 import Stepper from './components/Stepper';
+import Step1 from './components/Step1';
+import Step2 from './components/Step2';
 import './App.css';
 
 class App extends Component {
@@ -9,10 +11,8 @@ class App extends Component {
       <div className="App">
         <Header />
         <Stepper />
-        <div className="filter"></div>
-        <div className="item-list"></div>
-        <div className="form"></div>
-        <div className="buttons"></div>
+        <Step1 />
+        <Step2 />
       </div>
     );
   }
