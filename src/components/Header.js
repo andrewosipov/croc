@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../styles/Header.scss';
+import '../styles/Header.css';
 
 const Header = props => {
     return (

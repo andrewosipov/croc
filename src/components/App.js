@@ -3,7 +3,7 @@ import Header from './Header';
 import Stepper from './Stepper';
 import Step1 from './Step1';
 import Step2 from './Step2';
-import '../styles/App.scss';
+import '../styles/App.css';
 
 class App extends Component {
   render() {
