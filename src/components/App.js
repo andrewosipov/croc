@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom';
 import Header from './Header';
 import Stepper from './Stepper';
 import Step1 from './Step1';
@@ -8,12 +9,16 @@ import '../styles/App.css';
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header />
-        <Stepper />
-        <Step1 />
-        <Step2 />
-      </div>
+        <Router>
+          <div className="App">
+
+                <Header />
+                <Stepper />
+                <Step1 />
+                <Step2 />
+
+          </div>
+        </Router>
     );
   }
 }
