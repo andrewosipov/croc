@@ -1,4 +1,4 @@
-import {SELECT_SNAPSHOT, GET_SNAPSHOTS} from '../actions/snapshots';
+import {SELECT_SNAPSHOT, GET_SNAPSHOTS, GET_ACTIVE_SNAPSHOT} from '../actions/snapshots';
 import snapshotsFixctures from '../fixctures';
 
 const defaultSnapshotsState = {
@@ -17,6 +17,8 @@ export default (snapshotsState = defaultSnapshotsState, action) => {
             snapshotsState.activeSnapshot = payload.activeSnapshot;
             return snapshotsState;
 
+        case GET_ACTIVE_SNAPSHOT:
+            return snapshotsState;
     }
 
     return snapshotsState;
