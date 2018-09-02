@@ -19,7 +19,13 @@ class Filter extends Component {
     render() {
         return (
             <div className="Filter">
-                <input type="text" className="Filter__search" onChange={this.changeHandler} placeholder="Поиск по имени или ID" value={this.state.search} />
+                <input
+                    type="text"
+                    className="Filter__search"
+                    onChange={this.changeHandler}
+                    placeholder="Поиск по имени или ID"
+                    value={this.state.search}
+                />
             </div>
         );
     }
