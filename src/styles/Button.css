@@ -13,6 +13,7 @@
     transition: all .15s ease-in-out;
     padding: 10px 20px 10px 20px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .Button:hover {
