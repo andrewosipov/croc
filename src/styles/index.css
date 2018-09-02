@@ -1,7 +1,11 @@
-@import "_theme.css";
+.button {
+  background: #55bb73;
+  transition: all .15s ease-in-out; }
+
+.button:hover {
+  background: #56c376; }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
