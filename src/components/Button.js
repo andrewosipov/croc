@@ -1,12 +1,14 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/Button.css';
+
 class Button extends Component {
     static propTypes = {};
 
     render() {
         return (
-            <Button />
+            <button className="Button">Выбрать</button>
         );
     }
 }

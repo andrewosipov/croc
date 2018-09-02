@@ -1,9 +1,10 @@
-.button {
-  background: #55bb73;
-  color: #fff;
-  transition: all .15s ease-in-out;
+.Button {
+    background: #55bb73;
+    color: #fff;
+    border: none;
+    transition: all .15s ease-in-out;
 }
 
-.button:hover {
-  background: #58c678;
+.Button:hover {
+    background: #58c678;
 }
