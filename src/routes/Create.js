@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 const Create = props => {
     return (
-        <div>
+        <h2>
             Успешно создана виртуальная машина
-        </div>
+        </h2>
     );
 };
 

@@ -4,6 +4,10 @@
     font-size: 12px;
 }
 
+h2 {
+    text-align: center;
+}
+
 @media (max-width: 991px) {
 
     .App {
