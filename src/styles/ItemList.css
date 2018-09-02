@@ -1,5 +1,5 @@
 .ItemList {
-    padding: 0;
+    padding: 5px 0;
     margin: 0;
     max-height: 280px;
     overflow: auto;
