@@ -9,10 +9,12 @@ class Step2 extends Component {
     render() {
         return (
             <div className="Step Step--two">
-                <div className="form"></div>
+                <div className="form">
+
+                </div>
                 <div className="Button-container">
-                    <Button  />
-                    <Button  />
+                    <Button to="/step1" value="Назад" />
+                    <Button to="/create" value="Создать" />
                 </div>
             </div>
         );
