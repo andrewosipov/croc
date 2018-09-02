@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import Step1 from "../components/Step1";
 import Step2 from "../components/Step2";
-import NotFound from "../components/NotFound";
+import NotFound from "./NotFound";
 
 class Stepper extends Component {
     render() {
