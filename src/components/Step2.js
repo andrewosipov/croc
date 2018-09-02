@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import StepperCrumbs from './StepperCrumbs';
-import FieldList from './FieldList';
+import FieldList from '../containers/FieldList';
 import Button from "./Button";
 
 import '../styles/Step.css';
@@ -14,9 +14,7 @@ class Step2 extends Component {
             <div>
                 <StepperCrumbs activeStep={2} />
                 <div className="Step Step--two">
-                    <FieldList
-                        activeSnapshot={activeSnapshot}
-                    />
+                    <FieldList />
                 </div>
                 <div className="Button-container">
                     <Button to="/step1" value="Назад" />
