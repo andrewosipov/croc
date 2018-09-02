@@ -3,18 +3,20 @@ import Filter from './Filter';
 import Button from './Button';
 import PropTypes from 'prop-types';
 
+import '../styles/Step.css';
+
 class Step1 extends Component {
     static propTypes = {};
 
     render() {
         return (
-            <div>
+            <div className="Step Step--one">
                 <Filter />
                 <div className="item-list">
 
                 </div>
                 <div className="Button-container">
-                    <Button />
+                    <Button  />
                 </div>
             </div>
         );
