@@ -13,18 +13,18 @@ class FieldList extends Component {
             <div className="FieldList">
                 <Field
                     label="Образ диска"
-                    value={activeSnapshot.name}
+                    value={activeSnapshot.id}
                     type="label"
                 />
                 <Field
                     label="Описание"
-                    value="111"
+                    value={activeSnapshot.name}
                     type="text"
                     onChange={() => null}
                 />
                 <Field
-                    label="Размер диска"
-                    value="111"
+                    label="Размер диска (ГБ)"
+                    value="10"
                     type="text"
                     onChange={() => null}
                 />
