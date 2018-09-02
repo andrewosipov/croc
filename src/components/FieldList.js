@@ -10,10 +10,29 @@ class FieldList extends Component {
     render() {
         return (
             <div className="FieldList">
-                <Field label="Образ диска" value="111" type="label" />
-                <Field label="Описание" value="111" type="text" />
-                <Field label="Размер диска" value="111" type="text" />
-                <Field label="Запустить при создании" value="111" type="bool" />
+                <Field
+                    label="Образ диска"
+                    value="111"
+                    type="label"
+                />
+                <Field
+                    label="Описание"
+                    value="111"
+                    type="text"
+                    onChange={() => null}
+                />
+                <Field
+                    label="Размер диска"
+                    value="111"
+                    type="text"
+                    onChange={() => null}
+                />
+                <Field
+                    label="Запустить при создании"
+                    value="111"
+                    type="bool"
+                    onChange={() => null}
+                />
             </div>
         );
     }

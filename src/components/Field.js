@@ -2,16 +2,28 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class Field extends Component {
-    static propTypes = {};
+    static propTypes = {
+        label: PropTypes.string.isRequired,
+        value: PropTypes.string.isRequired,
+        type: PropTypes.string.isRequired,
+        onChange: PropTypes.func
+    };
 
     render() {
-        const {label = 'Label', value = 'Value', type = 'label'} = this.props;
+        const {
+            label = 'Label',
+            value = 'Value',
+            type = 'label',
+            onChange = () => null
+        } = this.props;
+
         let valueItem = null;
         switch (type) {
             case 'label': valueItem = value; break;
-            case 'text': valueItem = <input type="text" value={value} />; break;
+            case 'text': valueItem = <input type="text" value={value} onChange={onChange} />; break;
             case 'bool': valueItem = <input type="checkbox" />
         }
+
         return (
             <div className="FieldItem">
                 <div className="FieldItem__label">{label}</div>
