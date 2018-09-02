@@ -16,7 +16,7 @@ class Step1 extends Component {
 
                 </div>
                 <div className="Button-container">
-                    <Button  />
+                    <Button to="/step2" value="Выбрать" />
                 </div>
             </div>
         );
