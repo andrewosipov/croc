@@ -1,13 +1,15 @@
 import {connect} from 'react-redux';
+import {configureVirtualMachine} from '../actions/virtualMachine';
 import FieldList from '../components/FieldList';
 
 
 const mapStateToProps = state => ({
-    activeSnapshot: state.snapshots.entities[state.snapshots.activeSnapshotId]
+    activeSnapshot: state.snapshots.entities[state.snapshots.activeSnapshotId],
+    virtualMachine: state.virtualMachine
 });
 
 const mapDispatchToProps = dispatch => ({
-
+    configureVirtualMachine: () => dispatch(configureVirtualMachine()),
 });
 
 export default connect(

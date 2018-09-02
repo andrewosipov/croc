@@ -8,7 +8,7 @@ class FieldList extends Component {
     static propTypes = {};
 
     render() {
-        const {activeSnapshot} = this.props;
+        const {activeSnapshot, virtualMachine, configureVirtualMachine} = this.props;
         return (
             <div className="FieldList">
                 <Field

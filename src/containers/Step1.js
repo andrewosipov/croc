@@ -1,5 +1,6 @@
 import {connect} from 'react-redux';
 import {selectSnapshot, getSnapshots} from '../actions/snapshots';
+import {configureVirtualMachine} from '../actions/virtualMachine';
 import Step1 from '../components/Step1';
 
 
@@ -10,7 +11,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
     getSnapshots: () => dispatch(getSnapshots()),
-    selectSnapshot: (activeSnapshot) => dispatch(selectSnapshot(activeSnapshot))
+    selectSnapshot: (activeSnapshot) => dispatch(selectSnapshot(activeSnapshot)),
+    configureVirtualMachine: (virtualMachine) => dispatch(configureVirtualMachine(virtualMachine))
 });
 
 export default connect(

@@ -9,7 +9,7 @@ class Step2 extends Component {
     static propTypes = {};
 
     render() {
-        const {activeSnapshot} = this.props;console.dir(this.props)
+        const {activeSnapshot} = this.props;
         return (
             <div>
                 <StepperCrumbs activeStep={2} />
