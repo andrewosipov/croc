@@ -16,7 +16,7 @@ class Step1 extends Component {
                 <StepperCrumbs activeStep={1} />
                 <div className="Step Step--one">
                     <Filter />
-
+                    <ItemList />
                     <div className="Button-container">
                         <Button to="/step2" value="Выбрать" />
                     </div>
