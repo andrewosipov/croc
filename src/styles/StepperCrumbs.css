@@ -1,4 +1,4 @@
-.Stepper {
+.Stepper-crumbs {
     padding: 0 0 0 10px;
     margin: 0;
     display: flex;
@@ -6,7 +6,7 @@
     border-bottom: 1px solid #bdbdbd;
 }
 
-.Stepper__item {
+.Stepper-crumbs__item {
     list-style: none;
     display: inline-flex;
     padding: 0 10px 10px 10px;
@@ -15,7 +15,7 @@
     text-transform: uppercase;
 }
 
-.Stepper__item--active {
+.Stepper-crumbs__item--active {
     border-bottom: 2px solid #55bb73;
     color: #000;
 }
