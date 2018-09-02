@@ -5,14 +5,22 @@
 
 .FieldItem {
     display: flex;
-    margin: 0 0 10px 0;
+    padding: 12px 0 12px 0;
+    align-items: center;
 }
 
 .FieldItem__label {
     flex: 1;
-    max-width: 200px;
+    max-width: 180px;
 }
 
 .FieldItem__value {
     flex: 1;
+    position: relative;
+}
+
+.FieldItem__value input[type="text"] {
+    width: 100%;
+    padding: 6px 10px 5px 10px;
+    box-sizing: border-box;
 }
