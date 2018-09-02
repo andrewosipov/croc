@@ -1,0 +1,18 @@
+.FieldList {
+    width: 600px;
+    margin: 10px auto;
+}
+
+.FieldItem {
+    display: flex;
+    margin: 0 0 10px 0;
+}
+
+.FieldItem__label {
+    flex: 1;
+    max-width: 200px;
+}
+
+.FieldItem__value {
+    flex: 1;
+}
