@@ -23,6 +23,10 @@
     background: #dae8ed;
 }
 
+.ItemList-item--active {
+    border-color: #55bb73;
+}
+
 .ItemList-item__id {
     margin-right: 10px;
     flex: 1;

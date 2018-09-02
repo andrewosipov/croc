@@ -6,13 +6,16 @@ import '../styles/ItemList.css';
 class Item extends Component {
     static propTypes = {
         id: PropTypes.string,
-        name: PropTypes.string
+        name: PropTypes.string,
+        isActive: PropTypes.bool,
+        onClick: PropTypes.func
     };
 
     render() {
-        const {id, name} = this.props;
+        const {id, name, isActive, onClick} = this.props;
+        const activeClassName = isActive ? 'ItemList-item--active' : '';
         return (
-            <li className="ItemList-item">
+            <li className={`ItemList-item ${activeClassName}`} onClick={onClick}>
                 <span className="ItemList-item__id">{id}</span>
                 <span className="ItemList-item__name">{name}</span>
             </li>
