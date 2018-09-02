@@ -12,12 +12,15 @@ class App extends Component {
   render() {
     return (
         <Router>
-          <div className="App">
+            <div className="App">
                 <Header />
                 <Stepper />
-                <Step1 />
-                <Step2 />
-          </div>
+                <Switch>
+                    <Route path = '/step1' component={Step1} />
+                    <Route path = '/step2' component={Step2} />
+                    <Redirect from = "/" to = "/step1" />
+                </Switch>
+            </div>
         </Router>
     );
   }
