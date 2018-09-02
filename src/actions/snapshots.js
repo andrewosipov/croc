@@ -4,3 +4,7 @@ export const GET_SNAPSHOTS = 'GET_SNAPSHOTS';
 export const selectSnapshot = () => ({
     type: SELECT_SNAPSHOT
 });
+
+export const getSnapshots = () => ({
+    type: GET_SNAPSHOTS
+});
