@@ -9,6 +9,7 @@ class Stepper extends Component {
             <Switch>
                 <Route path = '/step1' component={Step1} />
                 <Route path = '/step2' component={Step2} />
+                <Redirect from = "/" to = "/step1" />
             </Switch>
         );
     }

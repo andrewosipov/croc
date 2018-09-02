@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Create = props => {
+const Success = props => {
     return (
         <h2>
             Успешно создана виртуальная машина
@@ -9,8 +9,8 @@ const Create = props => {
     );
 };
 
-Create.propTypes = {
+Success.propTypes = {
 
 };
 
-export default Create;
+export default Success;

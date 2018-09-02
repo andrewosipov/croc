@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom
 import Header from './Header';
 import Stepper from "../routes/Stepper";
 import NotFound from "../routes/NotFound";
-import Create from "../routes/Create";
+import Success from "../routes/Success";
 
 import '../styles/App.css';
 
@@ -15,8 +15,9 @@ class App extends Component {
             <div className="App">
                 <Header />
                 <Switch>
+                    <Route path = '/success' component={Success} />
+                    <Route path = '/' component={Stepper} />
                     <Route path = '/step*' component={Stepper} />
-                    <Route path = '/create' component={Create} />
                     <Route path = "*"  component = {NotFound} />
                 </Switch>
             </div>
