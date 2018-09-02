@@ -23,4 +23,5 @@
 
 .Stepper__link--active {
     border-bottom: 2px solid #55bb73;
+    color: #000;
 }
