@@ -7,6 +7,16 @@ import '../styles/FieldList.css';
 class FieldList extends Component {
     static propTypes = {};
 
+    componentDidMount() {
+        const {activeSnapshot, configureVirtualMachine} = this.props;
+        configureVirtualMachine({
+            id: activeSnapshot.id,
+            name: activeSnapshot.name,
+            size: 10,
+            run: false
+        });
+    }
+
     render() {
         const {activeSnapshot, virtualMachine, configureVirtualMachine} = this.props;
         return (

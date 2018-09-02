@@ -9,7 +9,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    configureVirtualMachine: () => dispatch(configureVirtualMachine()),
+    configureVirtualMachine: (virtualMachine) => dispatch(configureVirtualMachine(virtualMachine)),
 });
 
 export default connect(

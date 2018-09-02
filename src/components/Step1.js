@@ -11,7 +11,7 @@ class Step1 extends Component {
     static propTypes = {};
 
     render() {
-        const {snapshots, activeSnapshotId, selectSnapshot} = this.props;
+        const {snapshots, activeSnapshotId, selectSnapshot, configureVirtualMachine} = this.props;
         return (
             <div>
                 <StepperCrumbs activeStep={1} />
@@ -24,7 +24,7 @@ class Step1 extends Component {
                     />
                 </div>
                 <div className="Button-container">
-                    <Button to="/step2" value="Выбрать" />
+                    <Button to="/step2" value="Выбрать" onClick={() => configureVirtualMachine(activeSnapshotId)} />
                 </div>
             </div>
         );
