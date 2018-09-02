@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Stepper from './Stepper';
+import StepperCrumbs from './StepperCrumbs';
 import Button from "./Button";
 
 import '../styles/Step.css';
@@ -10,7 +10,7 @@ class Step2 extends Component {
     render() {
         return (
             <div>
-                <Stepper activeStep={2} />
+                <StepperCrumbs activeStep={2} />
                 <div className="Step Step--two">
                     <div className="form">
 

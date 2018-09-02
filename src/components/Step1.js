@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Stepper from './Stepper';
+import StepperCrumbs from './StepperCrumbs';
 import ItemList from './ItemList';
 import Filter from './Filter';
 import Button from './Button';
@@ -13,7 +13,7 @@ class Step1 extends Component {
     render() {
         return (
             <div>
-                <Stepper activeStep={1} />
+                <StepperCrumbs activeStep={1} />
                 <div className="Step Step--one">
                     <Filter />
 

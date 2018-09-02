@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import '../styles/Stepper.css';
 
-class Stepper extends Component {
+class StepperCrumbs extends Component {
     static propTypes = {
         activeStep: PropTypes.number
     };
@@ -22,4 +22,4 @@ class Stepper extends Component {
     }
 }
 
-export default Stepper;
+export default StepperCrumbs;
