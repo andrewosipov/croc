@@ -9,16 +9,12 @@ class ItemList extends Component {
         items: PropTypes.array
     };
 
-    state = {
-        activeItem: 0
-    };
-
-    clickHandler = (index) => {
-        this.setState({ activeItem: index });
-    };
-
     render() {
-        const {items = []} = this.props;
+        const {
+            items = [],
+            activeItem = 0,
+            onClick: clickHandler = () => null
+        } = this.props;
         return (
             <ul className="ItemList">
                 {
@@ -26,8 +22,8 @@ class ItemList extends Component {
                         <Item
                             id={item.id}
                             name={item.name}
-                            isActive={index === this.state.activeItem}
-                            onClick={ () => this.clickHandler(index) }
+                            isActive={index === activeItem}
+                            onClick={ () => clickHandler(index) }
                             key={item.id}
                         />
                     )

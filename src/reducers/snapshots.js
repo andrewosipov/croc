@@ -1,12 +1,23 @@
 import {SELECT_SNAPSHOT, GET_SNAPSHOTS} from '../actions/snapshots';
-import defaultSnapshotsState from '../fixctures';
+import snapshotsFixctures from '../fixctures';
 
-export default (snapshots = defaultSnapshotsState, action) => {
-    const {type} = action;
+const defaultSnapshotsState = {
+    entities: snapshotsFixctures,
+    activeSnapshot: 0
+};
+
+export default (snapshotsState = defaultSnapshotsState, action) => {
+    const {type, payload} = action;
 
     switch (type) {
-        case GET_SNAPSHOTS: return snapshots;
+        case GET_SNAPSHOTS:
+            return snapshotsState;
+
+        case SELECT_SNAPSHOT:
+            snapshotsState.activeSnapshot = payload.activeSnapshot;
+            return snapshotsState;
+
     }
 
-    return snapshots;
+    return snapshotsState;
 }

@@ -1,8 +1,11 @@
 export const SELECT_SNAPSHOT = 'SELECT_SNAPSHOT';
 export const GET_SNAPSHOTS = 'GET_SNAPSHOTS';
 
-export const selectSnapshot = () => ({
-    type: SELECT_SNAPSHOT
+export const selectSnapshot = (activeSnapshot) => ({
+    type: SELECT_SNAPSHOT,
+    payload: {
+        activeSnapshot
+    }
 });
 
 export const getSnapshots = () => ({
