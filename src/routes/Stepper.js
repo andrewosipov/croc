@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Redirect, Route, Switch} from "react-router-dom";
 import Step1 from "../containers/Step1";
-import Step2 from "../components/Step2";
+import Step2 from "../containers/Step2";
 
 class Stepper extends Component {
     render() {
