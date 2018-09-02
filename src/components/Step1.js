@@ -19,9 +19,9 @@ class Step1 extends Component {
                 <div className="Step Step--one">
                     <Filter />
                     <ItemList items={snapshots} />
-                    <div className="Button-container">
-                        <Button to="/step2" value="Выбрать" />
-                    </div>
+                </div>
+                <div className="Button-container">
+                    <Button to="/step2" value="Выбрать" />
                 </div>
             </div>
         );
