@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Stepper from './Stepper';
+import ItemList from './ItemList';
 import Filter from './Filter';
 import Button from './Button';
 import PropTypes from 'prop-types';
@@ -15,9 +16,7 @@ class Step1 extends Component {
                 <Stepper activeStep={1} />
                 <div className="Step Step--one">
                     <Filter />
-                    <div className="item-list">
 
-                    </div>
                     <div className="Button-container">
                         <Button to="/step2" value="Выбрать" />
                     </div>
