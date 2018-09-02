@@ -9,10 +9,14 @@ class Stepper extends Component {
 
     render() {
         const {activeStep} = this.props;
+        const activeClassName = 'Stepper__item--active';
+        const isActiveStep1 = activeStep === 1 ? activeClassName : '';
+        const isActiveStep2 = activeStep === 2 ? activeClassName : '';
+
         return (
             <ul className="Stepper">
-              <li className="Stepper__list-item">1. Образ диска</li>
-              <li className="Stepper__list-item">2. Параметры</li>
+              <li className={`Stepper__item ${isActiveStep1}`}>1. Образ диска</li>
+              <li className={`Stepper__item ${isActiveStep2}`}>2. Параметры</li>
             </ul>
         );
     }

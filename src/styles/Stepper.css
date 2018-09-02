@@ -6,21 +6,16 @@
     border-bottom: 1px solid #bdbdbd;
 }
 
-.Stepper__list-item {
+.Stepper__item {
     list-style: none;
     display: inline-flex;
-    padding: 0;
-    margin: 0 10px 0 0;
-}
-
-.Stepper__link {
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #bdbdbd;
     padding: 0 10px 10px 10px;
+    margin: 0 10px 0 0;
+    color: #bdbdbd;
+    text-transform: uppercase;
 }
 
-.Stepper__link--active {
+.Stepper__item--active {
     border-bottom: 2px solid #55bb73;
     color: #000;
 }
