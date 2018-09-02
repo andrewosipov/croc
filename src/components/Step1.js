@@ -13,7 +13,7 @@ class Step1 extends Component {
                 <div className="item-list">
 
                 </div>
-                <div className="buttons">
+                <div className="Button-container">
                     <Button />
                 </div>
             </div>

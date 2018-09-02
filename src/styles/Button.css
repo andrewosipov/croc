@@ -1,8 +1,18 @@
+.Button-container {
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+    margin: 20px 0 0 0;
+}
+
 .Button {
+    display: inline-flex;
     background: #55bb73;
     color: #fff;
     border: none;
     transition: all .15s ease-in-out;
+    padding: 10px 20px 10px 20px;
+    cursor: pointer;
 }
 
 .Button:hover {
