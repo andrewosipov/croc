@@ -8,11 +8,12 @@ class FieldList extends Component {
     static propTypes = {};
 
     render() {
+        const {activeSnapshot} = this.props;
         return (
             <div className="FieldList">
                 <Field
                     label="Образ диска"
-                    value="111"
+                    value={activeSnapshot.name}
                     type="label"
                 />
                 <Field

@@ -11,7 +11,7 @@ class Step1 extends Component {
     static propTypes = {};
 
     render() {
-        const {snapshots, activeSnapshot, selectSnapshot} = this.props;
+        const {snapshots, activeSnapshotId, selectSnapshot} = this.props;
         return (
             <div>
                 <StepperCrumbs activeStep={1} />
@@ -19,7 +19,7 @@ class Step1 extends Component {
                     <Filter />
                     <ItemList
                         items={snapshots}
-                        activeItem={activeSnapshot}
+                        activeItem={activeSnapshotId}
                         onClick={(activeIndex) => selectSnapshot(activeIndex)}
                     />
                 </div>

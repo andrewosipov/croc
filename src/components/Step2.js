@@ -9,11 +9,14 @@ class Step2 extends Component {
     static propTypes = {};
 
     render() {
+        const {activeSnapshot} = this.props;console.dir(this.props)
         return (
             <div>
                 <StepperCrumbs activeStep={2} />
                 <div className="Step Step--two">
-                    <FieldList />
+                    <FieldList
+                        activeSnapshot={activeSnapshot}
+                    />
                 </div>
                 <div className="Button-container">
                     <Button to="/step1" value="Назад" />

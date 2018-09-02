@@ -1,9 +1,9 @@
-import {SELECT_SNAPSHOT, GET_SNAPSHOTS, GET_ACTIVE_SNAPSHOT} from '../actions/snapshots';
+import {SELECT_SNAPSHOT, GET_SNAPSHOTS} from '../actions/snapshots';
 import snapshotsFixctures from '../fixctures';
 
 const defaultSnapshotsState = {
     entities: snapshotsFixctures,
-    activeSnapshot: 0
+    activeSnapshotId: 0
 };
 
 export default (snapshotsState = defaultSnapshotsState, action) => {
@@ -14,11 +14,9 @@ export default (snapshotsState = defaultSnapshotsState, action) => {
             return snapshotsState;
 
         case SELECT_SNAPSHOT:
-            snapshotsState.activeSnapshot = payload.activeSnapshot;
+            snapshotsState.activeSnapshotId = payload.activeSnapshotId;
             return snapshotsState;
 
-        case GET_ACTIVE_SNAPSHOT:
-            return snapshotsState;
     }
 
     return snapshotsState;
