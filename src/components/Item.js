@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
+import '../styles/ItemList.css';
+
 class Item extends Component {
     static propTypes = {
         id: PropTypes.string,
@@ -10,9 +12,9 @@ class Item extends Component {
     render() {
         const {id, name} = this.props;
         return (
-            <li className="Item" key={id}>
-                <span className="Item__id">{id}</span>
-                <span className="Item__name">{name}</span>
+            <li className="ItemList-item">
+                <span className="ItemList-item__id">{id}</span>
+                <span className="ItemList-item__name">{name}</span>
             </li>
         );
     }

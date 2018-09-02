@@ -2,15 +2,18 @@ import React, {Component} from 'react';
 import Item from './Item';
 import PropTypes from 'prop-types';
 
+import '../styles/ItemList.css';
+
 class ItemList extends Component {
-    static propTypes = {};
+    static propTypes = {
+        items: PropTypes.array
+    };
 
     render() {
+        const {items} = this.props;
         return (
             <ul className="ItemList">
-                <Item id="id-1" name="Name 1" />
-                <Item id="id-2" name="Name 2" />
-                <Item id="id-3" name="Name 3" />
+                {items.map(item => <Item id={item.id} name={item.name} key={item.id} />)}
             </ul>
         );
     }

@@ -5,6 +5,8 @@ import Filter from './Filter';
 import Button from './Button';
 import PropTypes from 'prop-types';
 
+import snapshots from '../fixctures';
+
 import '../styles/Step.css';
 
 class Step1 extends Component {
@@ -16,7 +18,7 @@ class Step1 extends Component {
                 <StepperCrumbs activeStep={1} />
                 <div className="Step Step--one">
                     <Filter />
-                    <ItemList />
+                    <ItemList items={snapshots} />
                     <div className="Button-container">
                         <Button to="/step2" value="Выбрать" />
                     </div>
