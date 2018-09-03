@@ -40,7 +40,7 @@ class FieldList extends Component {
         const {virtualMachine, configureVirtualMachine} = this.props;
         const newVM = {...virtualMachine};
 
-        //newVM.name = ev.target.value;
+        newVM.run = !newVM.run;
         configureVirtualMachine(newVM);
     };
 
