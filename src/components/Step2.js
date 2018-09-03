@@ -34,10 +34,11 @@ class Step2 extends Component {
     };
 
     createButtonHandler = (ev) => {
-        const {createVirtualMachine} = this.props;
+        const {createVirtualMachine, successVirtualMachine} = this.props;
         const validateForm = this.validate();
         if( validateForm.result ) {
             createVirtualMachine();
+            successVirtualMachine();
         } else {
             ev.preventDefault();
             this.setState( validateForm.newState )

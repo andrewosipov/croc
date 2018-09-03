@@ -14,7 +14,8 @@ class FieldList extends Component {
             id: activeSnapshot.id,
             name: activeSnapshot.name,
             size: 10,
-            run: false
+            run: false,
+            success: false
         });
     }
 
