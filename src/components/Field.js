@@ -4,13 +4,13 @@ import PropTypes from 'prop-types';
 
 class Field extends Component {
     static propTypes = {
-        label: PropTypes.string.isRequired,
+        label: PropTypes.string,
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.number,
             PropTypes.bool
-        ]).isRequired,
-        type: PropTypes.string.isRequired,
+        ]),
+        type: PropTypes.string,
         onChange: PropTypes.func
     };
 
@@ -26,7 +26,7 @@ class Field extends Component {
         switch (type) {
             case 'label': valueItem = value; break;
             case 'text': valueItem = <input type="text" value={value} onChange={onChange} />; break;
-            case 'bool': valueItem = <input type="checkbox" defaultChecked={getBool(value)} />; break;
+            case 'bool': valueItem = <input type="checkbox" checked={getBool(value)} onChange={onChange} />; break;
             default: valueItem = value;
         }
 
