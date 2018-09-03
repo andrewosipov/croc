@@ -1,12 +1,17 @@
 import React, {Component} from 'react';
 import Field from './Field';
 import {isNumeric} from '../helpers';
-//import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import '../styles/FieldList.css';
 
 class FieldList extends Component {
-    static propTypes = {};
+    static propTypes = {
+        activeSnapshot: PropTypes.object,
+        virtualMachine: PropTypes.object,
+        status: PropTypes.object,
+        configureVirtualMachine: PropTypes.func
+    };
 
     componentDidMount() {
         const {activeSnapshot, configureVirtualMachine} = this.props;
@@ -46,7 +51,7 @@ class FieldList extends Component {
     };
 
     render() {
-        const {virtualMachine, configureVirtualMachine, status} = this.props;
+        const {virtualMachine, status} = this.props;
         return (
             <div className="FieldList">
                 <Field

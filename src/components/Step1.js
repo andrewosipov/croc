@@ -9,7 +9,13 @@ import PropTypes from 'prop-types';
 import '../styles/Step.css';
 
 class Step1 extends Component {
-    static propTypes = {};
+    static propTypes = {
+        snapshots: PropTypes.array,
+        filter: PropTypes.object,
+        activeSnapshotId: PropTypes.number,
+        selectSnapshot: PropTypes.func,
+        configureVirtualMachine: PropTypes.func
+    };
 
     render() {
         const {snapshots, filter, activeSnapshotId, selectSnapshot, configureVirtualMachine} = this.props;

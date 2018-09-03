@@ -1,5 +1,4 @@
 import {connect} from 'react-redux';
-import {successVirtualMachine} from '../actions/virtualMachine';
 import Success from '../components/Success';
 
 

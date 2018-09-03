@@ -5,6 +5,7 @@
 
 .FieldItem {
     display: flex;
+    flex-wrap: wrap;
     padding: 12px 0 12px 0;
     align-items: center;
 }
@@ -27,4 +28,13 @@
     width: 100%;
     padding: 6px 10px 5px 10px;
     box-sizing: border-box;
+}
+
+
+@media ( max-width: 767px ) {
+
+    .FieldList {
+        width: 100%;
+    }
+
 }

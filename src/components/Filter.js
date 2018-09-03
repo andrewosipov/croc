@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import '../styles/Filter.css';
 
 class Filter extends Component {
-    static propTypes = {};
+    static propTypes = {
+        searchSnapshots: PropTypes.func,
+        search: PropTypes.string
+    };
 
     changeHandler = (ev) => {
         const {searchSnapshots} = this.props;

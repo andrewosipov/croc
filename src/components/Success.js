@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 class Success extends Component {
-    static propTypes = {};
+    static propTypes = {
+        virtualMachine: PropTypes.object
+    };
 
     render() {
         const {virtualMachine} = this.props;
