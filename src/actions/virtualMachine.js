@@ -9,8 +9,5 @@ export const configureVirtualMachine = (virtualMachine) => ({
 });
 
 export const createVirtualMachine = (virtualMachine) => ({
-    type: CREATE_VIRTUAL_MACHINE,
-    payload: {
-        virtualMachine
-    }
+    type: CREATE_VIRTUAL_MACHINE
 });
