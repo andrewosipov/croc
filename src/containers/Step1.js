@@ -3,7 +3,6 @@ import {selectSnapshot, getSnapshots} from '../actions/snapshots';
 import {configureVirtualMachine} from '../actions/virtualMachine';
 import Step1 from '../components/Step1';
 
-
 const mapStateToProps = state => ({
     snapshots: state.snapshots.entities,
     activeSnapshotId: state.snapshots.activeSnapshotId
