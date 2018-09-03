@@ -1,16 +1,15 @@
 import React from 'react';
+import Success from '../containers/Success';
 import PropTypes from 'prop-types';
 
-const Success = props => {
+const SuccessRoute = props => {
     return (
-        <h2>
-            Успешно создана виртуальная машина
-        </h2>
+        <Success />
     );
 };
 
-Success.propTypes = {
+SuccessRoute.propTypes = {
 
 };
 
-export default Success;
+export default SuccessRoute;
