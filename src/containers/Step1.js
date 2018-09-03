@@ -12,7 +12,7 @@ const mapStateToProps = state => ({
 const mapDispatchToProps = dispatch => ({
     getSnapshots: () => dispatch(getSnapshots()),
     selectSnapshot: (activeSnapshotId) => dispatch(selectSnapshot(activeSnapshotId)),
-    configureVirtualMachine: (activeSnapshotId) => dispatch(configureVirtualMachine(activeSnapshotId))
+    configureVirtualMachine: (activeSnapshot) => dispatch(configureVirtualMachine(activeSnapshot))
 });
 
 export default connect(

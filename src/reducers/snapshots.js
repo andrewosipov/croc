@@ -17,7 +17,7 @@ export default (snapshotsState = defaultSnapshotsState, action) => {
             snapshotsState.activeSnapshotId = payload.activeSnapshotId;
             return snapshotsState;
 
+        default:
+            return snapshotsState;
     }
-
-    return snapshotsState;
 }

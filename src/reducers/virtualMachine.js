@@ -1,8 +1,8 @@
 import {CREATE_VIRTUAL_MACHINE, CONFIGURE_VIRTUAL_MACHINE} from "../actions/virtualMachine";
 
 const defaultVirtualMachineState = {
-  id: undefined,
-  name: undefined,
+  id: 'id',
+  name: 'Name',
   size: 10,
   run: false
 };
@@ -17,7 +17,10 @@ export default (virtualMachineState = defaultVirtualMachineState, action) => {
 
         case CREATE_VIRTUAL_MACHINE:
             return virtualMachineState;
+
+        default:
+            return virtualMachineState;
     }
 
-    return virtualMachineState;
+
 }

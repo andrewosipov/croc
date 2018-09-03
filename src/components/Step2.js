@@ -8,6 +8,12 @@ import '../styles/Step.css';
 class Step2 extends Component {
     static propTypes = {};
 
+    createButtonHandler = (ev) => {
+        const {createVirtualMachine} = this.props;
+        //ev.preventDefault();
+        createVirtualMachine();
+    };
+
     render() {
         return (
             <div>
@@ -17,7 +23,7 @@ class Step2 extends Component {
                 </div>
                 <div className="Button-container">
                     <Button to="/step1" value="Назад" />
-                    <Button to="/create" value="Создать" />
+                    <Button to="/create" value="Создать" onClick={this.createButtonHandler} />
                 </div>
             </div>
         );

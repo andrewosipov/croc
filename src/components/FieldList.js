@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Field from './Field';
-import PropTypes from 'prop-types';
+import {isNumeric} from '../helpers';
+//import PropTypes from 'prop-types';
 
 import '../styles/FieldList.css';
 
@@ -17,32 +18,58 @@ class FieldList extends Component {
         });
     }
 
+    nameChangeHandler = (ev) => {
+        const {virtualMachine, configureVirtualMachine} = this.props;
+        const newVM = {...virtualMachine};
+
+        newVM.name = ev.target.value;
+        configureVirtualMachine(newVM);
+    };
+
+    sizeChangeHandler = (ev) => {
+        if( !isNumeric(ev.target.value) ) return;
+
+        const {virtualMachine, configureVirtualMachine} = this.props;
+        const newVM = {...virtualMachine};
+
+        newVM.size = ev.target.value;
+        configureVirtualMachine(newVM);
+    };
+
+    runChangeHandler = (ev) => {
+        const {virtualMachine, configureVirtualMachine} = this.props;
+        const newVM = {...virtualMachine};
+
+        //newVM.name = ev.target.value;
+        configureVirtualMachine(newVM);
+    };
+
     render() {
-        const {activeSnapshot, virtualMachine, configureVirtualMachine} = this.props;
+        const {virtualMachine, configureVirtualMachine} = this.props;
         return (
             <div className="FieldList">
                 <Field
                     label="Образ диска"
-                    value={activeSnapshot.id}
+                    value={virtualMachine.id}
                     type="label"
                 />
                 <Field
                     label="Описание"
-                    value={activeSnapshot.name}
+                    value={virtualMachine.name}
                     type="text"
-                    onChange={() => null}
+                    onChange={this.nameChangeHandler}
                 />
                 <Field
                     label="Размер диска (ГБ)"
-                    value="10"
+                    value={virtualMachine.size}
                     type="text"
-                    onChange={() => null}
+                    onChange={this.sizeChangeHandler}
                 />
                 <Field
                     label="Запустить при создании"
-                    value="111"
+                    value={virtualMachine.run}
                     type="bool"
-                    onChange={() => null}
+                    onChange={this.runChangeHandler}
                 />
             </div>
         );
