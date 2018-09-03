@@ -3,8 +3,7 @@ import {searchSnapshots} from '../actions/filter'
 import Filter from '../components/Filter';
 
 const mapStateToProps = state => ({
-    snapshots: state.snapshots.entities,
-    activeSnapshotId: state.snapshots.activeSnapshotId
+    filter: state.filter
 });
 
 const mapDispatchToProps = dispatch => ({
