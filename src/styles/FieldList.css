@@ -9,6 +9,10 @@
     align-items: center;
 }
 
+.FieldItem--error {
+    background: pink;
+}
+
 .FieldItem__label {
     flex: 1;
     max-width: 180px;

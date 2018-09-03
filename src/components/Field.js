@@ -19,6 +19,7 @@ class Field extends Component {
             label = 'Label',
             value = 'Value',
             type = 'label',
+            isValid = true,
             onChange = () => null
         } = this.props;
 
@@ -30,8 +31,10 @@ class Field extends Component {
             default: valueItem = value;
         }
 
+        const validClassName = isValid ? '' : 'FieldItem--error';
+
         return (
-            <div className="FieldItem">
+            <div className={`FieldItem ${validClassName}`}>
                 <div className="FieldItem__label">{label}</div>
                 <div className="FieldItem__value">{valueItem}</div>
             </div>
