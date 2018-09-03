@@ -1,13 +1,19 @@
 import {SEARCH_SNAPSHOTS} from "../actions/filter";
 
-export default (searchState = '', action) => {
+const defaultState = {
+  search: ''
+};
+
+export default (filterState = defaultState, action) => {
     const {type, payload} = action;
 
     switch (type) {
         case SEARCH_SNAPSHOTS:
-            return searchState;
+            const newState = {...filterState};
+            newState.search = payload.search;
+            return newState;
 
         default:
-            return searchState;
+            return filterState;
     }
 }

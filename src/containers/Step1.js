@@ -5,6 +5,7 @@ import Step1 from '../components/Step1';
 
 const mapStateToProps = state => ({
     snapshots: state.snapshots.entities,
+    filter: state.filter,
     activeSnapshotId: state.snapshots.activeSnapshotId
 });
 

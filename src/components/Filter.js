@@ -6,17 +6,13 @@ import '../styles/Filter.css';
 class Filter extends Component {
     static propTypes = {};
 
-    state = {
-        search: ''
-    };
-
     changeHandler = (ev) => {
-        this.setState({
-            search: ev.target.value
-        })
+        const {searchSnapshots} = this.props;
+        searchSnapshots(ev.target.value);
     };
 
     render() {
+        const {search} = this.props;
         return (
             <div className="Filter">
                 <input
@@ -24,7 +20,7 @@ class Filter extends Component {
                     className="Filter__search"
                     onChange={this.changeHandler}
                     placeholder="Поиск по имени или ID"
-                    value={this.state.search}
+                    value={search}
                 />
             </div>
         );
