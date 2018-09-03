@@ -3,7 +3,8 @@ import Step2 from '../components/Step2';
 import {configureVirtualMachine, createVirtualMachine} from '../actions/virtualMachine';
 
 const mapStateToProps = state => ({
-    activeSnapshot: state.snapshots.entities[state.snapshots.activeSnapshotId]
+    activeSnapshot: state.snapshots.entities[state.snapshots.activeSnapshotId],
+    virtualMachine: state.virtualMachine
 });
 
 const mapDispatchToProps = dispatch => ({

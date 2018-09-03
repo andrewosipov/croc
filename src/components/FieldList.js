@@ -45,7 +45,7 @@ class FieldList extends Component {
     };
 
     render() {
-        const {virtualMachine, configureVirtualMachine} = this.props;
+        const {virtualMachine, configureVirtualMachine, status} = this.props;
         return (
             <div className="FieldList">
                 <Field
@@ -57,12 +57,14 @@ class FieldList extends Component {
                     label="Описание"
                     value={virtualMachine.name}
                     type="text"
+                    isValid={status.nameValid}
                     onChange={this.nameChangeHandler}
                 />
                 <Field
                     label="Размер диска (ГБ)"
                     value={virtualMachine.size}
                     type="text"
+                    isValid={status.sizeValid}
                     onChange={this.sizeChangeHandler}
                 />
                 <Field
